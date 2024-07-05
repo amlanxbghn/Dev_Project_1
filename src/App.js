@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Navbar from './components/Navbar';
+import AppContent from './components/AppContent';
 import './App.css';
 
 function App() {
@@ -10,11 +12,16 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const prompt = `Your prompt here: ${text}, ${convertFrom}, ${convertTo}, Your prompt here`;
+    const prompt = `prompt: ${text}, ${convertFrom}, ${convertTo},prompt`;
 
     try {
-      const response = await axios.post('YOUR_GEMINI_API_ENDPOINT', {
+      const response = await axios.post('https://api.gemini.com/v1/convert', {
         prompt: prompt
+      }, {
+        headers: {
+          'Authorization': `Bearer ${process.env.REACT_APP_GEMINI_API_KEY}`,
+          'Content-Type': 'application/json'
+        }
       });
       setResult(response.data.result);
     } catch (error) {
@@ -24,43 +31,19 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Cross Platform Diversification Tool</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Text:</label>
-          <input
-            type="text"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Convert From:</label>
-          <input
-            type="text"
-            value={convertFrom}
-            onChange={(e) => setConvertFrom(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Convert To:</label>
-          <input
-            type="text"
-            value={convertTo}
-            onChange={(e) => setConvertTo(e.target.value)}
-          />
-        </div>
-        <button type="submit">Convert</button>
-      </form>
-      {result && (
-        <div>
-          <h2>Result:</h2>
-          <p>{result}</p>
-        </div>
-      )}
+      <Navbar />
+      <AppContent
+        text={text}
+        setText={setText}
+        convertFrom={convertFrom}
+        setConvertFrom={setConvertFrom}
+        convertTo={convertTo}
+        setConvertTo={setConvertTo}
+        handleSubmit={handleSubmit}
+        result={result}
+      />
     </div>
   );
 }
 
-export default App;
-
+export default App; 

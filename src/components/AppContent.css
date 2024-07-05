@@ -1,0 +1,61 @@
+.AppContent {
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .AppContent h1 {
+    font-size: 3.5rem;
+    font-family: 'Inter','sans-serif';
+    margin-bottom: 20px;
+  }
+  
+  .AppContent h4 {
+    font-size: 1.25rem;
+    font-family: sans-serif;
+    color: #ffffff85;
+    margin-bottom: 20px;
+  }
+  
+  .AppContent form {
+    margin-bottom: 20px;
+  }
+  
+  .AppContent label {
+    font-weight: bold;
+  }
+  
+  .AppContent select,
+  .AppContent input[type="text"] {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+  
+  .convert-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .convert-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .AppContent h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  .AppContent p {
+    font-size: 1rem;
+  }
