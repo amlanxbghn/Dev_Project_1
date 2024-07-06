@@ -1,13 +1,7 @@
-// src/components/Navbar.js
 import React from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-  const handleScrollToFeatures = () => {
-    const featuresSection = document.getElementById('features-page');
-    featuresSection.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <nav className="navbar">
       <div className="navbar-name">
