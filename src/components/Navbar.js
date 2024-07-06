@@ -15,7 +15,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-links">
         <a href="/">Home</a>
-        <a href="#features" onClick={handleScrollToFeatures}>Features</a>
+        <a href="/">Features</a>
         <a href="/about">About</a>
         <a href="/sign up" className="signup-button">Sign Up</a>
       </div>
