@@ -15,7 +15,7 @@ const AppContent = ({
 
   return (
     <div className="AppContent">
-      <h1>Cross Platform <span className="highlight">Content</span> Diversification Tool.</h1>
+      <h1>Cross-Platform <span className="highlight">Content</span> Diversification Tool.</h1>
       <h4>Bridge Platforms Seamlessly, Empower Your Presence Everywhere.</h4>
       <form onSubmit={handleSubmit}>
         <div>
