@@ -1,6 +1,6 @@
 body {
-  background-color:   #000000ee;
-  color: #fff;
+  background-color: #000000ee;
+  color: #F9F0FF;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -12,6 +12,10 @@ body {
   justify-content: center;
   height: 100vh;
   flex-direction: column;
+}
+
+.highlight {
+    color: #4541FE;
 }
 
 form {

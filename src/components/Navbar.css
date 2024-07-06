@@ -17,7 +17,7 @@
   }
   
   .navbar-name a {
-    color: #ffffff;
+    color: #F9F0FF;
     text-decoration: none;
     font-size: 2rem;
     margin: 2.5rem;
@@ -25,12 +25,28 @@
     }
   
   .navbar-links a {
-    color: #fff;
+    color: #F9F0FF;
     text-decoration: none;
     font-size: larger;
     font-family: sans-serif;
     margin-right: 5rem;
     }
+
+    .navbar-links a.signup-button {
+        background-color: #4541FE;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: larger;
+        font-family: sans-serif;
+        margin-right: 5rem;
+      }
+      
+      .navbar-links a.signup-button:hover {
+        background-color: #454aca;
+        color: #F9F0FF;
+      }
   
   .navbar-links a:hover {
     color: #ffffff85;
